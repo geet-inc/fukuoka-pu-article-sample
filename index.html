@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>公共社会学科へようこそ｜福岡県立大学</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --c-text: #1a1a1a;
+    --c-text-sub: #555;
+    --c-text-mute: #777;
+    --c-primary: #1f3a68;
+    --c-accent: #8b1e2d;
+    --c-line: #d8d8d8;
+    --c-line-soft: #ececec;
+    --c-bg: #ffffff;
+    --c-bg-alt: #f6f4ef;
+    --ff-serif: "Noto Serif JP", "Hiragino Mincho ProN", "YuMincho", serif;
+    --ff-sans: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    --max-w: 760px;
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: var(--ff-sans);
+    color: var(--c-text);
+    background: var(--c-bg);
+    line-height: 1.9;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    font-feature-settings: "palt";
+  }
+
+  /* ===== Header ===== */
+  .site-header {
+    border-bottom: 1px solid var(--c-line);
+    background: #fff;
+  }
+  .site-header__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 22px 32px;
+    display: flex;
+    align-items: center;
+  }
+  .site-header__logo {
+    font-family: var(--ff-serif);
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.12em;
+    color: var(--c-primary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 14px;
+  }
+  .site-header__logo::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 26px;
+    background: var(--c-accent);
+  }
+
+  /* ===== Breadcrumbs ===== */
+  .breadcrumbs {
+    border-bottom: 1px solid var(--c-line-soft);
+    background: var(--c-bg-alt);
+  }
+  .breadcrumbs__inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 32px;
+    font-size: 12.5px;
+    color: var(--c-text-mute);
+  }
+  .breadcrumbs a {
+    color: var(--c-text-mute);
+    text-decoration: none;
+  }
+  .breadcrumbs a:hover { color: var(--c-primary); }
+  .breadcrumbs__sep { margin: 0 8px; color: #bbb; }
+
+  /* ===== Page hero ===== */
+  .page-hero {
+    padding: 72px 32px 56px;
+    border-bottom: 1px solid var(--c-line-soft);
+  }
+  .page-hero__inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+  .page-hero__eyebrow {
+    font-family: var(--ff-serif);
+    font-size: 13px;
+    letter-spacing: 0.3em;
+    color: var(--c-accent);
+    margin: 0 0 18px;
+    text-transform: uppercase;
+  }
+  .page-hero__title {
+    font-family: var(--ff-serif);
+    font-weight: 600;
+    font-size: 34px;
+    line-height: 1.5;
+    margin: 0 0 24px;
+    color: var(--c-text);
+    letter-spacing: 0.04em;
+  }
+  .page-hero__meta {
+    font-size: 13px;
+    color: var(--c-text-mute);
+    display: flex;
+    gap: 20px;
+    border-top: 1px solid var(--c-line-soft);
+    padding-top: 18px;
+  }
+  .page-hero__meta span::before {
+    content: "";
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    background: var(--c-accent);
+    border-radius: 50%;
+    margin-right: 8px;
+    transform: translateY(-3px);
+  }
+
+  /* ===== Article ===== */
+  .article {
+    padding: 64px 32px 96px;
+  }
+  .article__inner {
+    max-width: var(--max-w);
+    margin: 0 auto;
+  }
+  .article p {
+    margin: 0 0 1.6em;
+    font-size: 15.5px;
+    line-height: 2;
+    color: #222;
+  }
+  .article h2 {
+    font-family: var(--ff-serif);
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 1.6;
+    margin: 3.2em 0 1.2em;
+    padding: 0 0 0.55em;
+    border-bottom: 2px solid var(--c-primary);
+    color: var(--c-primary);
+    letter-spacing: 0.04em;
+    position: relative;
+  }
+  .article h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 64px;
+    height: 2px;
+    background: var(--c-accent);
+  }
+  .article h3 {
+    font-family: var(--ff-serif);
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 1.6;
+    margin: 2.4em 0 0.9em;
+    padding: 0 0 0 14px;
+    border-left: 3px solid var(--c-accent);
+    color: var(--c-text);
+    letter-spacing: 0.04em;
+  }
+  .article ul,
+  .article ol {
+    margin: 0 0 1.8em;
+    padding-left: 1.4em;
+  }
+  .article li {
+    margin: 0 0 0.6em;
+    font-size: 15.5px;
+    line-height: 1.95;
+  }
+  .article ul li::marker {
+    color: var(--c-accent);
+  }
+  .article strong {
+    font-weight: 600;
+  }
+
+  /* lead paragraph */
+  .article__lead {
+    font-family: var(--ff-serif);
+    font-size: 17px !important;
+    line-height: 2 !important;
+    color: #2a2a2a !important;
+    padding: 0 0 0 18px;
+    border-left: 3px solid var(--c-primary);
+    margin-bottom: 2.4em !important;
+  }
+
+  /* blockquote */
+  .article blockquote {
+    margin: 2.4em 0;
+    padding: 24px 28px;
+    background: var(--c-bg-alt);
+    border-left: 4px solid var(--c-primary);
+    font-family: var(--ff-serif);
+    font-size: 15.5px;
+    line-height: 1.95;
+    color: #2a2a2a;
+  }
+  .article blockquote p { margin: 0 0 0.6em; font-size: inherit; }
+  .article blockquote p:last-child { margin: 0; }
+  .article blockquote cite {
+    display: block;
+    margin-top: 12px;
+    font-style: normal;
+    font-size: 13px;
+    color: var(--c-text-mute);
+    font-family: var(--ff-sans);
+  }
+  .article blockquote cite::before { content: "— "; }
+
+  /* figure / image */
+  .article figure {
+    margin: 2.8em 0 2.8em;
+  }
+  .article figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+  .article figure figcaption {
+    margin-top: 12px;
+    font-size: 12.5px;
+    color: var(--c-text-mute);
+    line-height: 1.7;
+    letter-spacing: 0.04em;
+    padding-left: 12px;
+    border-left: 2px solid var(--c-line);
+  }
+
+  /* hero image — full-bleed under page-hero */
+  .hero-image {
+    margin: 0;
+    background: var(--c-bg-alt);
+  }
+  .hero-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 420px;
+    object-fit: cover;
+  }
+
+  /* section divider */
+  .article hr {
+    border: none;
+    height: 1px;
+    background: var(--c-line-soft);
+    margin: 3.2em 0;
+  }
+
+  /* dl style for course intros */
+  .course-list {
+    margin: 1.8em 0 2.4em;
+    border-top: 1px solid var(--c-line-soft);
+  }
+  .course-list__item {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--c-line-soft);
+  }
+  .course-list__name {
+    font-family: var(--ff-serif);
+    font-weight: 600;
+    font-size: 17px;
+    color: var(--c-primary);
+    margin: 0 0 10px;
+    letter-spacing: 0.04em;
+  }
+  .course-list__desc {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.95;
+    color: #333;
+  }
+
+  /* ===== Footer ===== */
+  .site-footer {
+    background: var(--c-primary);
+    color: #cfd8e6;
+    padding: 40px 32px;
+    text-align: center;
+    font-size: 12.5px;
+    letter-spacing: 0.08em;
+  }
+  .site-footer__name {
+    font-family: var(--ff-serif);
+    font-size: 15px;
+    color: #fff;
+    letter-spacing: 0.16em;
+    margin-bottom: 8px;
+  }
+  .site-footer__copy {
+    color: #93a4bd;
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 640px) {
+    .site-header__inner { padding: 18px 20px; }
+    .site-header__logo { font-size: 18px; }
+    .site-header__logo::before { height: 22px; }
+    .breadcrumbs__inner { padding: 10px 20px; }
+    .page-hero { padding: 48px 20px 36px; }
+    .page-hero__title { font-size: 24px; }
+    .page-hero__meta { flex-direction: column; gap: 6px; }
+    .article { padding: 44px 20px 72px; }
+    .article p, .article li { font-size: 15px; }
+    .article h2 { font-size: 21px; }
+    .article h3 { font-size: 17px; }
+    .article__lead { font-size: 15.5px !important; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header__inner">
+    <a href="#" class="site-header__logo">福岡県立大学</a>
+  </div>
+</header>
+
+<nav class="breadcrumbs" aria-label="パンくず">
+  <div class="breadcrumbs__inner">
+    <a href="#">ホーム</a>
+    <span class="breadcrumbs__sep">›</span>
+    <a href="#">学部・学科</a>
+    <span class="breadcrumbs__sep">›</span>
+    <a href="#">人間社会学部</a>
+    <span class="breadcrumbs__sep">›</span>
+    <span>公共社会学科</span>
+  </div>
+</nav>
+
+<section class="page-hero">
+  <div class="page-hero__inner">
+    <p class="page-hero__eyebrow">Department of Public Sociology</p>
+    <h1 class="page-hero__title">公共社会学科へようこそ<br>——社会を学び、社会を変える力を</h1>
+    <div class="page-hero__meta">
+      <span>人間社会学部</span>
+      <span>公共社会学科</span>
+    </div>
+  </div>
+</section>
+
+<figure class="hero-image">
+  <img src="https://images.unsplash.com/photo-1631599143424-5bc234fbebf1?w=1600&q=80&auto=format&fit=crop"
+       alt="キャンパスの外観" loading="eager">
+</figure>
+
+<article class="article">
+  <div class="article__inner">
+
+    <h2>ようこそ、公共社会学科へ</h2>
+    <p class="article__lead">
+      はじめまして。公共社会学科のページへお越しいただきありがとうございます。<br>
+      この学科は、「社会のしくみを読み解き、より良い未来をつくる人材を育てる」ことを使命としています。
+    </p>
+    <p>
+      地域の課題に向き合い、多文化共生を実践し、データと対話で社会を動かす——そんな力を、4年間で身につけることができます。
+    </p>
+
+    <h2>公共社会学科の概要</h2>
+    <p>
+      公共社会学科は、社会学・政治学・福祉学・文化人類学などの知見を横断的に学ぶ学科です。「公共」という言葉が示すとおり、個人の利益だけでなく、コミュニティ全体の豊かさを追求することを学びの軸に置いています。
+    </p>
+    <p>
+      学生数は1学年約120名。少人数のゼミ形式を重視しており、教員との距離が近いことが特徴のひとつです。
+    </p>
+
+    <h2>教育の特徴と目標</h2>
+    <p>本学科の教育には、3つの柱があります。</p>
+    <ul>
+      <li><strong>現場主義</strong> — 教室の外に出て、地域社会と直接関わる機会を多数設けています。</li>
+      <li><strong>学際性</strong> — 社会学にとどまらず、法学・経済学・心理学など複数の視点から社会を読み解きます。</li>
+      <li><strong>実践力</strong> — 調査・分析・提案というサイクルを繰り返すことで、社会課題に対応できる実践的なスキルを養います。</li>
+    </ul>
+    <p>
+      卒業時には、行政・NPO・企業・国際機関など多様なフィールドで活躍できる人材となることを目指します。
+    </p>
+
+    <figure>
+      <img src="https://images.unsplash.com/photo-1773496430507-bf525b36b80d?w=1400&q=80&auto=format&fit=crop"
+           alt="地域社会の風景" loading="lazy">
+      <figcaption>地域に根ざしたフィールドワークは、本学科の学びの中核です。</figcaption>
+    </figure>
+
+    <h2>コース紹介</h2>
+    <p>学科内には2つのコースがあり、2年次から選択します。</p>
+
+    <div class="course-list">
+      <div class="course-list__item">
+        <p class="course-list__name">地域社会ネットワーク領域</p>
+        <p class="course-list__desc">
+          地方創生・コミュニティデザイン・社会福祉・まちづくりなど、日本の地域社会が抱える課題にアプローチするコースです。フィールドワークや自治体との連携プロジェクトを通じて、地域に根ざした解決策を考えます。
+        </p>
+      </div>
+      <div class="course-list__item">
+        <p class="course-list__name">アジア国際共生領域</p>
+        <p class="course-list__desc">
+          アジア各国の文化・社会・政治を深く学び、多文化共生の実践を目指すコースです。留学プログラムや外国人住民との交流活動を通じて、グローバルな視野と現場対応力を磨きます。
+        </p>
+      </div>
+    </div>
+
+    <h2>カリキュラム</h2>
+    <p>
+      1・2年次は社会学の基礎理論、統計・調査方法論、フィールドワーク入門などを幅広く学びます。3年次からはゼミに所属し、専門テーマを深掘り。4年次に卒業論文として結実させます。
+    </p>
+    <h3>主な科目例</h3>
+    <ul>
+      <li>社会学概論</li>
+      <li>地域社会論</li>
+      <li>多文化共生論</li>
+      <li>社会調査法</li>
+      <li>コミュニティデザイン論</li>
+      <li>アジア社会論</li>
+      <li>公共政策入門</li>
+      <li>福祉社会学</li>
+    </ul>
+
+    <h2>何を学ぶか</h2>
+    <p>
+      一言でいえば、<strong>「社会の見方」を学びます。</strong>
+    </p>
+    <p>
+      ニュースで流れる社会問題の背景にある構造、地域コミュニティが抱える見えにくい課題、異文化間の摩擦が生まれるメカニズム——こうした現象を、感覚ではなく理論と調査データをもとに読み解く力を鍛えます。
+    </p>
+    <p>
+      「なぜそうなっているのか」を問い続ける習慣が、この学科の学びの核心です。
+    </p>
+
+    <h2>教員紹介</h2>
+    <p>
+      本学科には、地域社会・国際関係・福祉・文化人類学など多様な専門分野を持つ教員が在籍しています。それぞれが現場との接点を持ちながら研究を続けており、授業の随所に生きた知見が反映されています。
+    </p>
+    <p>
+      ゼミは3年次から始まり、週1回の少人数ディスカッションが学びの中心となります。
+    </p>
+
+    <h2>資格・免許／支援プログラム</h2>
+    <p>本学科では、以下の資格・免許の取得を支援しています。</p>
+    <ul>
+      <li>社会調査士</li>
+      <li>教員免許（社会・公民・情報）</li>
+      <li>社会福祉主事（任用資格）</li>
+    </ul>
+    <p>
+      また、インターンシップ支援・学習相談・キャリア面談など、学生一人ひとりの進路を後押しするサポート体制も充実しています。
+    </p>
+
+    <h2>社会調査実習</h2>
+    <p>
+      3年次必修の「社会調査実習」は、本学科の看板科目のひとつ。学生がテーマを設定し、アンケート・インタビュー・観察などの手法で実際にデータを収集・分析・報告します。
+    </p>
+    <h3>過去のテーマ例</h3>
+    <ul>
+      <li>「福岡市における外国人住民の生活課題」</li>
+      <li>「農村集落の担い手不足と地域コミュニティの変容」</li>
+      <li>「若者の投票行動と政治関心に関する調査」</li>
+    </ul>
+
+    <h2>教職課程（中学社会・高校公民・高校情報）</h2>
+    <p>
+      本学科では、中学校社会科・高等学校公民科・高等学校情報科の教員免許状を取得することができます。教育実習や教職関連科目は、学科の専門科目と並行して履修可能です。
+    </p>
+    <p>
+      教員志望の学生には、先輩教員との交流会や模擬授業の練習機会も設けられています。
+    </p>
+
+    <figure>
+      <img src="https://images.unsplash.com/photo-1530099486328-e021101a494a?w=1400&q=80&auto=format&fit=crop"
+           alt="グループでのディスカッション風景" loading="lazy">
+      <figcaption>少人数ゼミでは、学生同士の対話が学びを深めます。</figcaption>
+    </figure>
+
+    <h2>輝く学生たち</h2>
+    <p>学生たちは授業の外でも活発に動いています。</p>
+    <ul>
+      <li>地域の祭り運営に携わるボランティアサークル</li>
+      <li>留学生との異文化交流イベントの企画・運営</li>
+      <li>自治体のまちづくり会議へのオブザーバー参加</li>
+      <li>学科独自の「社会調査発表会」での研究発表</li>
+    </ul>
+    <p>
+      「学んだことを、すぐ試せる場所がある」——それがこの学科の強みのひとつです。
+    </p>
+
+    <h2>海外へ</h2>
+    <p>本学科では、短期・長期さまざまな海外プログラムを用意しています。</p>
+    <ul>
+      <li><strong>短期研修</strong>：韓国・タイ・台湾の協定大学での2〜4週間のプログラム</li>
+      <li><strong>長期留学</strong>：1学期〜1年間の交換留学（単位互換制度あり）</li>
+      <li><strong>海外フィールドワーク</strong>：東南アジアの農村や都市スラムでの現地調査</li>
+    </ul>
+    <p>
+      「アジアを知ることは、日本を知ること」——国際共生領域の教員がよく口にする言葉です。
+    </p>
+
+    <h2>公共社会学科 卒業論文</h2>
+    <p>
+      4年間の学びの集大成が卒業論文です。テーマは学生自身が設定し、指導教員との議論を重ねながら1年かけて仕上げます。
+    </p>
+    <h3>過去の卒業論文タイトル例</h3>
+    <ul>
+      <li>「地方移住者のコミュニティ適応プロセスに関する研究」</li>
+      <li>「SNS上における政治的分断の可視化——Twitterデータの分析から」</li>
+      <li>「在日外国人の子どもの教育機会に関する比較研究」</li>
+    </ul>
+
+    <h2>活躍する卒業生</h2>
+    <p>
+      本学科の卒業生は、行政・教育・福祉・メディア・NGO・民間企業など多様な分野で活躍しています。
+    </p>
+    <blockquote>
+      <p>社会の見方を変えてくれた4年間でした。今、自治体の政策担当として働いていますが、学科で培った調査力と対話力が毎日役に立っています。</p>
+      <cite>卒業生・地方公務員</cite>
+    </blockquote>
+    <p>
+      現場で使える思考力と調査スキルが、卒業後のキャリアを支えています。
+    </p>
+
+    <h2>進路・就職状況</h2>
+    <p>直近卒業生の主な就職先：</p>
+    <ul>
+      <li>地方自治体・国家公務員</li>
+      <li>教員（中学・高校）</li>
+      <li>社会福祉法人・NPO</li>
+      <li>一般企業（人事・総務・CSR部門）</li>
+      <li>大学院進学（社会学・福祉学・国際関係学）</li>
+    </ul>
+    <p>
+      就職率は例年<strong>95%以上</strong>。学科独自のキャリア支援プログラムと、少人数ゼミで培った「人と話す力」が就活に活きているという声が多く聞かれます。
+    </p>
+
+    <hr>
+
+    <p>
+      公共社会学科に関するお問い合わせは、学科事務室までお気軽にどうぞ。オープンキャンパスや個別相談会も随時開催しています。
+    </p>
+
+  </div>
+</article>
+
+<footer class="site-footer">
+  <div class="site-footer__name">福岡県立大学</div>
+  <div class="site-footer__copy">© Fukuoka Prefectural University</div>
+</footer>
+
+</body>
+</html>
